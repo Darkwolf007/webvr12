@@ -12,6 +12,7 @@
         <script type="text/javascript" src="js/webxr.js"></script>
         <script type="text/javascript" src="js/joystick.js"></script>
         <script type="text/javascript" src="js/camera-cube-env.js"></script>
+        <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
         
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
@@ -79,7 +80,7 @@
 			<a-entity id="#counter"  gltf-model="#counter" scale="1 1 1" position="3.817143201828003 0.7300000190734863 -11.385000228881836" visible="true" shadow="cast: false" ></a-entity>
 			<a-entity id="#door1"  gltf-model="#door1" scale="1 1 1" position="-2.943279981613159 0.981702983379364 -9.819564819335938" visible="true" shadow="cast: false" ></a-entity>
 			<a-entity id="#doorjam"  gltf-model="#doorjam" scale="1 1 1" position="-3.003711462020874 1.20169997215271 -10.507065773010254" visible="true" shadow="cast: false" ></a-entity>
-			<a-entity id="#floor"  gltf-model="#floor" scale="1 1 1" position="1.913950800895691 -0.05000000447034836 -9.526683807373047" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#floor"  gltf-model="#floor" scale="1 1 1" position="1.913950800895691 -0.05000000447034836 -9.526683807373047" visible="true" shadow="cast: false" nav-mesh ></a-entity>
 			<a-entity id="#lamp"  gltf-model="#lamp" scale="1 1 1" position="-0.49712613224983215 0.9508757591247559 -8.381349563598633" visible="true" shadow="cast: false" ></a-entity>
 			<a-entity id="#laptop"  gltf-model="#laptop" scale="1 1 1" position="0.22626946866512299 0.7571666836738586 -9.078079223632812" visible="true" shadow="cast: false" ></a-entity>
 			<a-entity id="#music"  gltf-model="#music" scale="1 1 1" position="1.5342252254486084 0.419437438249588 -11.914034843444824" visible="true" shadow="cast: false" ></a-entity>
@@ -103,7 +104,7 @@
             <!-- Camera -->
             <a-entity id="player" 
                 position="0 -0.2 -10" 
-                movement-controls="speed: 0.10000000149011612;">
+                movement-controls="speed: 0.10000000149011612;constrainToNavMesh: true">
                 <a-entity id="camera" 
                     camera="near: 0.001; fov: 60" 
                     position="0 1.7000000476837158 0" 
